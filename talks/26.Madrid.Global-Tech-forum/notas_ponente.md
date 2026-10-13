@@ -8,8 +8,6 @@ Frases ancla: (1) «Una herramienta no responde preguntas: cambia qué preguntas
 
 [0:00 · APERTURA]
 
-• Gracias, Ester: tú la máquina, yo de dónde viene.
-
 • La IA es un paso más en una cadena muy larga. No el primero.
 
 ## 2

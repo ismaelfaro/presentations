@@ -23,7 +23,6 @@ OUT = ROOT / "Ismael_Faro_Presentacion_notas.pptx"
 
 NOTES = {
 1: """[0:00 · APERTURA]
-• Gracias, Ester: tú la máquina, yo de dónde viene.
 • La IA es un paso más en una cadena muy larga. No el primero.""",
 
 2: """[1:00 · SILICIO]
