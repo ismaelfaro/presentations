@@ -1,0 +1,279 @@
+{
+ "title": "Cómo la IA transformará nuestras vidas y trabajo en la próxima década",
+ "event": "Foro Tecnológico Global · Módulo II",
+ "place": "Madrid",
+ "date": "2026-10-08",
+ "speaker": "Ismael Faro",
+ "language": "es",
+ "slides": 34,
+ "topics": {
+  "portada": {
+   "slide": 1,
+   "alias": [
+    "inicio",
+    "principio",
+    "comienzo",
+    "título",
+    "titulo",
+    "presentación"
+   ]
+  },
+  "silicio": {
+   "slide": 2,
+   "alias": [
+    "arena",
+    "1823"
+   ]
+  },
+  "vidrio": {
+   "slide": 3,
+   "alias": [
+    "cristal",
+    "jarrón",
+    "egipto"
+   ]
+  },
+  "telescopio": {
+   "slide": 4,
+   "alias": [
+    "galileo",
+    "séneca",
+    "lupa",
+    "júpiter",
+    "microscopio"
+   ]
+  },
+  "caja negra": {
+   "slide": 5,
+   "alias": [
+    "black box"
+   ]
+  },
+  "alphafold": {
+   "slide": 6,
+   "alias": [
+    "weathernext",
+    "nueva lente",
+    "clima"
+   ]
+  },
+  "bombilla": {
+   "slide": 7,
+   "alias": [
+    "edison",
+    "electricidad",
+    "swan",
+    "luz eléctrica"
+   ]
+  },
+  "internet": {
+   "slide": 8,
+   "alias": [
+    "cambio que ya hemos vivido",
+    "web",
+    "smartphone",
+    "móvil",
+    "chatgpt"
+   ]
+  },
+  "titulares": {
+   "slide": 9,
+   "alias": [
+    "periódicos",
+    "noticias",
+    "prensa",
+    "bandera roja"
+   ]
+  },
+  "empleo": {
+   "slide": 10,
+   "alias": [
+    "trabajo",
+    "sereno",
+    "farolero",
+    "oficios"
+   ]
+  },
+  "datos": {
+   "slide": 11,
+   "alias": [
+    "fedea",
+    "bbva",
+    "uno de cada tres",
+    "estadísticas"
+   ]
+  },
+  "miedos": {
+   "slide": 12,
+   "alias": [
+    "riesgos",
+    "nombrarlos"
+   ]
+  },
+  "herramienta": {
+   "slide": 13,
+   "alias": [
+    "modelo",
+    "reto",
+    "aprender a usar"
+   ]
+  },
+  "lo que viene": {
+   "slide": 14,
+   "alias": [
+    "futuro",
+    "tres direcciones"
+   ]
+  },
+  "investigación": {
+   "slide": 15,
+   "alias": [
+    "ciencia",
+    "migraciones",
+    "mi trabajo"
+   ]
+  },
+  "llave": {
+   "slide": 16,
+   "alias": [
+    "destino",
+    "desbloquear"
+   ]
+  },
+  "robótica": {
+   "slide": 17,
+   "alias": [
+    "robot",
+    "robots",
+    "humanoides",
+    "pekín"
+   ]
+  },
+  "waymo": {
+   "slide": 18,
+   "alias": [
+    "ia física",
+    "coches",
+    "conducción autónoma",
+    "sin conductor"
+   ]
+  },
+  "hugging face": {
+   "slide": 19,
+   "alias": [
+    "brazo robótico",
+    "lerobot",
+    "microduck"
+   ]
+  },
+  "cuántica": {
+   "slide": 22,
+   "alias": [
+    "computación cuántica",
+    "cuántico",
+    "qubits"
+   ]
+  },
+  "materiales": {
+   "slide": 23,
+   "alias": [
+    "química",
+    "bosch"
+   ]
+  },
+  "farmacéutica": {
+   "slide": 24,
+   "alias": [
+    "moderna",
+    "vacunas",
+    "proteínas",
+    "fármacos"
+   ]
+  },
+  "energía": {
+   "slide": 25,
+   "alias": [
+    "energética",
+    "e.on",
+    "optimización"
+   ]
+  },
+  "banca": {
+   "slide": 26,
+   "alias": [
+    "hsbc",
+    "bonos",
+    "finanzas",
+    "bancos"
+   ]
+  },
+  "biología": {
+   "slide": 27,
+   "alias": [
+    "pong",
+    "neuronas",
+    "células",
+    "cerebro",
+    "dishbrain"
+   ]
+  },
+  "hongos": {
+   "slide": 28,
+   "alias": [
+    "setas",
+    "fungi",
+    "micelio"
+   ]
+  },
+  "fresnel": {
+   "slide": 29,
+   "alias": [
+    "lente",
+    "luz",
+    "augustin"
+   ]
+  },
+  "faro": {
+   "slide": 30,
+   "alias": [
+    "lighthouse"
+   ]
+  },
+  "dirigir": {
+   "slide": 31,
+   "alias": [
+    "frenar",
+    "innovación",
+    "no nos quedemos mirando"
+   ]
+  },
+  "españa": {
+   "slide": 32,
+   "alias": [
+    "actuador",
+    "observador",
+    "soberanía",
+    "talento"
+   ]
+  },
+  "anfaia": {
+   "slide": 33,
+   "alias": [
+    "jóvenes",
+    "esperanza",
+    "electricistas",
+    "humano"
+   ]
+  },
+  "final": {
+   "slide": 34,
+   "alias": [
+    "cierre",
+    "conclusión",
+    "última",
+    "despedida",
+    "moldear"
+   ]
+  }
+ }
+}

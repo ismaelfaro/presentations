@@ -1,0 +1,4 @@
+needle3.cact: https://huggingface.co/Cactus-Compute/needle3 (Apache-2.0)
+whistle.cact: https://huggingface.co/Cactus-Compute/whistle (Apache-2.0)
+engine/needle.js, engine/needle.wasm: https://github.com/cactus-compute/needle (Apache-2.0)
+Copyright Cactus Compute, Inc.

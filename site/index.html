@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0b0c">
+<meta name="description" content="Presentaciones de Ismael Faro, controlables por voz con Whistle y Needle 3 en el navegador.">
+<link rel="icon" href="player/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="player/icon-180.png">
+<title>Presentaciones · Ismael Faro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0b0b0c; --card: #141416; --line: rgba(255,255,255,.09); --text: #f2efe9; --muted: #9a968f; --accent: #e8b04b;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace; --sans: "Inter", "Avenir Next", system-ui, sans-serif; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  main { max-width: 1080px; margin: 0 auto; padding: max(48px, env(safe-area-inset-top)) 16px 64px; }
+  .label { font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-size: clamp(32px, 6vw, 52px); font-weight: 600; letter-spacing: -.02em; margin: 14px 0 10px; }
+  .lead { color: var(--muted); font-size: 17px; line-height: 1.55; max-width: 640px; margin: 0 0 40px; }
+  .lead b { color: var(--text); font-weight: 500; }
+  #talks { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+  a.talk { display: block; text-decoration: none; color: inherit; background: var(--card); border: 1px solid var(--line);
+    border-radius: 16px; overflow: hidden; transition: border-color .2s, transform .2s; }
+  a.talk:hover, a.talk:focus-visible { border-color: rgba(232,176,75,.5); transform: translateY(-2px); outline: none; }
+  a.talk img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #000; }
+  .meta { padding: 16px 18px 20px; }
+  .meta h2 { font-size: 18px; font-weight: 500; line-height: 1.35; margin: 10px 0 8px; }
+  .meta p { margin: 0; color: var(--muted); font-size: 14px; }
+  footer { margin-top: 56px; color: var(--muted); font: 12px/1.6 var(--mono); }
+  footer a { color: var(--muted); }
+  .empty { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <div class="label">Ismael Faro · Presentaciones</div>
+  <h1>Charlas</h1>
+  <p class="lead">Cada presentación se puede pasar con la voz: di <b>«AGI, siguiente»</b> o
+    <b>«AGI, llévame a la de robótica»</b>. El reconocimiento corre en tu dispositivo con
+    Whistle y Needle 3; el audio no sale del navegador.</p>
+  <section id="talks" aria-live="polite"></section>
+  <footer>
+    Motor y modelos: <a href="https://github.com/cactus-compute/needle">Cactus Needle 3 y Whistle</a> (Apache-2.0).
+  </footer>
+</main>
+<script>
+  const fmt = (d) => { try { return new Date(d + "T12:00").toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" }); } catch { return d; } };
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+  fetch("talks.json").then((r) => r.json()).then((talks) => {
+    const box = document.getElementById("talks");
+    if (!talks.length) { box.append(el("p", "empty", "Todavía no hay charlas.")); return; }
+    for (const t of talks) {
+      const a = el("a", "talk"); a.href = `${encodeURIComponent(t.slug)}/`;
+      const img = el("img"); img.src = `${encodeURIComponent(t.slug)}/slides/slides.001.jpeg`; img.alt = ""; img.loading = "lazy";
+      const m = el("div", "meta");
+      m.append(el("div", "label", [t.place, t.date && fmt(t.date)].filter(Boolean).join(" · ")),
+               el("h2", null, t.title), el("p", null, t.event || ""));
+      a.append(img, m); box.append(a);
+    }
+  });
+</script>
+</body>
+</html>

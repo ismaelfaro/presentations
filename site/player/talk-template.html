@@ -1,0 +1,94 @@
+<!doctype html>
+<!-- Plantilla de cada charla: tools/new_talk.py la copia como <charla>/index.html -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0b0c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="AGI">
+<meta name="description" content="{{TITLE}} · {{EVENT}}. Presentación controlada por voz con Whistle y Needle 3, en el navegador.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="../player/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../player/icon-180.png">
+<title>{{TITLE}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../player/style.css">
+</head>
+<body>
+
+<!-- ============ vista público ============ -->
+<main id="stage" aria-live="polite">
+  <img id="slideA" class="slide on" alt="">
+  <img id="slideB" class="slide" alt="">
+  <div id="blank"></div>
+</main>
+
+<!-- ============ vista ponente (?view=presenter) ============ -->
+<section id="presenter" hidden>
+  <header class="p-top">
+    <span class="mono label">VISTA PONENTE</span>
+    <span id="pClock" class="mono"></span>
+    <span class="mono">Tiempo <b id="pTimer">00:00</b> <button id="pTimerReset" class="ghost">reiniciar</button></span>
+  </header>
+  <div class="p-grid">
+    <div class="p-current"><img id="pCur" alt=""><span id="pCurN" class="mono badge"></span></div>
+    <div class="p-side">
+      <div class="p-next"><span class="mono label">SIGUIENTE</span><img id="pNext" alt=""></div>
+      <div class="p-log"><span class="mono label">VOZ</span><ol id="pLog"></ol></div>
+    </div>
+    <article id="pNotes" class="p-notes"></article>
+  </div>
+</section>
+
+<!-- ============ notas (vista público) ============ -->
+<aside id="notes" hidden>
+  <span class="mono label">NOTAS · <span id="notesN"></span></span>
+  <div id="notesText"></div>
+</aside>
+
+<!-- ============ índice ============ -->
+<div id="overview" hidden><div id="grid"></div></div>
+
+<!-- ============ toast de voz ============ -->
+<div id="toast" hidden>
+  <div id="toastHeard" class="heard"></div>
+  <div id="toastAction" class="action"></div>
+  <div id="toastMeta" class="mono meta"></div>
+</div>
+
+<!-- ============ barra de control ============ -->
+<footer id="hud">
+  <div class="progress" aria-hidden="true"></div>
+  <button id="mic" class="mic" title="Micrófono (M)" aria-label="Activar micrófono">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 15a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-2.08A7 7 0 0 0 19 12h-2Z"/></svg>
+    <span class="ring"></span>
+  </button>
+  <div class="status">
+    <div id="statusLine" class="mono">Micrófono apagado · pulsa <kbd>M</kbd></div>
+    <div id="hint" class="hint">Di <b>«AGI, siguiente»</b>, <b>«AGI, llévame a la de robótica»</b> o <b>«AGI, ve a la doce»</b></div>
+  </div>
+  <div class="modes" role="radiogroup" aria-label="Modo de escucha">
+    <button data-mode="wake" class="on" title="Sólo actúa si empiezas con «AGI»">«AGI»</button>
+    <button data-mode="ptt" title="Mantén pulsada la tecla V mientras hablas">Pulsar V</button>
+    <button data-mode="open" title="Cualquier frase es un comando">Siempre</button>
+  </div>
+  <form id="cmdForm" class="cmd"><input id="cmd" placeholder="Escribe un comando…  ( / )" autocomplete="off"></form>
+  <div class="nav">
+    <button id="prev" class="ghost" title="Anterior (←)">‹</button>
+    <span id="counter" class="mono"></span>
+    <button id="next" class="ghost" title="Siguiente (→)">›</button>
+    <button id="btnNotes" class="ghost mono" title="Notas (N)">N</button>
+    <button id="btnPresenter" class="ghost mono" title="Abrir vista ponente (P)">P</button>
+    <button id="btnFull" class="ghost mono" title="Pantalla completa (F)">⛶</button>
+  </div>
+  <div class="engine mono">Whistle + Needle 3 · en tu dispositivo</div>
+</footer>
+
+<script src="../player/agent.js"></script>
+<script src="../player/app.js"></script>
+</body>
+</html>

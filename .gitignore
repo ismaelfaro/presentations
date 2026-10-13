@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.DS_Store
+.claude/
+# Las presentaciones originales no se publican ni se suben: sólo las imágenes exportadas en site/<charla>/slides/
+*.pptx
+*.key
