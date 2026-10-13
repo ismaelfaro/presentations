@@ -2,6 +2,17 @@
 __pycache__/
 .DS_Store
 .claude/
-# Las presentaciones originales no se publican ni se suben: sólo las imágenes exportadas en site/<charla>/slides/
+# Las presentaciones originales y los documentos no se suben: sólo las imágenes exportadas en site/<charla>/slides/
+*.ppt
 *.pptx
+*.pptm
+*.pps
+*.ppsx
+*.potx
 *.key
+*.odp
+*.pdf
+*.PPT
+*.PPTX
+*.KEY
+*.PDF
